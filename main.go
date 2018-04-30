@@ -1,13 +1,15 @@
 package main
 
-import "splitingpixel/KernelPixel"
+import "splitingPixelKernel/KernelPixel"
 
 //import "os"
 
 func main() {
         //imagePath := os.Args[1]
-        imagePath := "/home/cabox/workspace/src/splitingpixel/testFiles/full.png"
-        imageData := KernelPixel.GetImageData(imagePath)
-        KernelPixel.GetSimilarityOfDataImages(imageData)
+        imagePathFull := "/home/cabox/workspace/src/splitingPixelKernel/testFiles/full.png"
+        imagePathPartial := "/home/cabox/workspace/src/splitingPixelKernel/testFiles/partial.png"
+        imageDataFull := KernelPixel.GetImageData(imagePathFull)
+        imageDataPartial := KernelPixel.GetImageData(imagePathPartial)
+        KernelPixel.GetSimilarityOfDataImages(imageDataFull, imageDataPartial)
         
 }
